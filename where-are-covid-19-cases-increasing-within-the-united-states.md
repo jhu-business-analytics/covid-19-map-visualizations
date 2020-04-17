@@ -6,7 +6,7 @@ description: >-
 
 # Where are COVID-19 Cases Increasing within the United States?
 
-We'll use [plotly express](https://plotly.com/python/choropleth-maps/) to build an animated data visualization that shows the number of cumulative confirmed COVID-19 cases in US counties, but first, we'll review some geospatial data analysis in Python by making a [choropleth map](https://www.arcgis.com/apps/MapJournal/index.html?appid=75eff041036d40cf8e70df99641004ca) to showcase the number of cumulative COVID-19 confirmed cases in each US county on today's date. We'll use the data from April 15, 2020 fo this tutorial, but you can use the most updated data depending on the day that you conduct the analysis. 
+We'll use [plotly express](https://plotly.com/python/choropleth-maps/) to build an animated [choropleth map](https://www.arcgis.com/apps/MapJournal/index.html?appid=75eff041036d40cf8e70df99641004ca) that shows the number of cumulative confirmed COVID-19 cases per 1,000 residents in US counties, but first, we'll review some geospatial data analysis in Python by making a bubble map and a density heat map to showcase the number of cumulative COVID-19 confirmed cases in each US county on today's date. We'll use the data from April 15, 2020 fo this tutorial, but you can use the most updated data depending on the day that you conduct the analysis. 
 
 ### Choropleth Maps
 
