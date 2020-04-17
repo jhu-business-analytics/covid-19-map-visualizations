@@ -31,7 +31,9 @@ In our Python Notebooks we’ll use the following packages to conduct our analys
  ```
  
 ## Data Answer
-The steps for our data analysis are available in [this GitBook tutorial](https://melanieshimano.gitbook.io/covid-19-critical-trend-data-visualizations/). You can use [this](https://github.com/jhu-business-analytics/covid-19-map-visualizations/blob/master/2020-04-14-covid19-cases-us-county-animation-gitbooktutorial-STARTER-melanieshimano.ipynb) pre-commented starter notebook to follow along with the tutorial, or copy and paste the code from the codeblocks (dark blue text boxes) in the tutorial.
+The steps for our data analysis are available in [this GitBook tutorial](https://melanieshimano.gitbook.io/covid-19-critical-trend-data-visualizations/). You can use [this](https://github.com/jhu-business-analytics/covid-19-map-visualizations/blob/master/2020-04-14-covid19-cases-us-county-animation-gitbooktutorial-STARTER-melanieshimano.ipynb) pre-commented starter notebook to follow along with the tutorial, or copy and paste the code from the codeblocks (dark blue text boxes) in the tutorial to create this and other geospatial data visualizations: 
+
+![alt text](https://github.com/jhu-business-analytics/covid-19-map-visualizations/blob/master/.gitbook/assets/us_county_covid19_toll.gif)
  
  ## Business Answer
 How might our data visualizations help county and state leadership or business owners in the US? What other data might we want to incorporate into an animated choropleth map to better understand the toll of the novel coronavirus in the United States?
