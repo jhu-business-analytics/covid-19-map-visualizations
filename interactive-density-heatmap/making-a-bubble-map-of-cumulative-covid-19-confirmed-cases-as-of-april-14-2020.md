@@ -23,11 +23,11 @@ bubble_map = px.scatter_mapbox(df, # name of dataframe with data for bubble char
 
 Plotly Express uses mapbox to create the bubble chart maps, so we'll need to first define and set the Mapbox token for this graph. To do this you'll need to log into your Mapbox account \(or make a free Mapbox account if you don't already have one\) and click on your **Account** menu \(under the astronaut icon in the top, right corner: 
 
-![](.gitbook/assets/mapbox-account-menu.png)
+![](../.gitbook/assets/mapbox-account-menu.png)
 
 Then copy either your default Public Access Token, or create a new one:
 
-![](.gitbook/assets/access-token-mapbox.png)
+![](../.gitbook/assets/access-token-mapbox.png)
 
 Since you are only allotted a certain number of requests to use the Mapbox access token \(e.g. to use Mapbox's mapping functionality in your code\), you don't want to share your Mapbox access tokens with anyone, or publish this in your code on GitHub or elsewhere. There are ways to import access tokens and other private information so that you don't need to remember to redact this information if you share or publish your code. However, for now, we'll copy and paste our Mapbox tokens directly into the code **but make sure to remove this line from your notebook before you upload the notebook files to GitHub.** To enter our access tokens, we'll write: 
 
@@ -75,7 +75,7 @@ Here:
 
 This gives us an interactive chart that looks like: 
 
-![](.gitbook/assets/bubble-map-cases.png)
+![](../.gitbook/assets/bubble-map-cases.png)
 
 Where we can hover over each bubble to view county-specific data.
 

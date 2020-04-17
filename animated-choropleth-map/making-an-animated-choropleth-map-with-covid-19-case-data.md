@@ -67,18 +67,18 @@ covid_uscounty_color = px.choropleth(df_county_nyt, # dataframe with data for ch
                                      color='cases_per100000', # column in df that denotes the color scale
                                      animation_group = "month_day_name",
                                      animation_frame = "month_day_name",
-                                     hover_name = df_county_nyt["county"].astype(str) + ", " + df_county_nyt["state"].astype(str),
-                                     hover_data = ["cases", "deaths", "cases_per100000", "deaths_per100000"],
+                                     hover_name = df_county_nyt["county"] + ", " + df_county_nyt["state"],
+                                     hover_data = ["cases", "deaths", "cases_per1000", "deaths_per100000"],
                                      color_continuous_scale=covid_colorscale, # custom color scale to better show exponential growth
                                      scope="usa", # scope of map (world, USA, or any continent)
-                                     labels={'cases':'Cummulative Confirmed COVID-19 Cases',
+                                     labels={'cases':'Cummulative Reported COVID-19 Cases',
                                              "deaths": "Cummulative Reported COVID-19 Deaths",
                                              "month_day_name": "Date",
                                              "fips": "FIPS Code",
-                                            "cases_per100000": "Cummulative Confirmed Cases per 100,000 People",
+                                            "cases_per100000": "Cummulative Reported Cases per 100,000 People",
                                              "deaths_per100000": "Cummulative Reported Deaths per 100,000 People"
                                             }, # renaming any columns used
-                                     title = "Spread of COVID-19 Cases in US Counties<br>January 21, 2020-April 15, 2020"
+                                     title = "Spread of COVID-19 Cases in US Counties Per Capita<br>January 21, 2020-April 15, 2020"
                                           
                           )
 ```
@@ -91,11 +91,11 @@ Here:
 * **`cases_per_100000`** defines the column values that dictate the color shading within our choropleth map
 * **`month_day_name`** identifies the values in the data frame that change with each animation "frame"
 * **`df_county_nyt["county"] + ", " + df_county_nyt["state"]`** means that we combine the values in the county and state columns to include as bolded values in our hover text
-* **`["cases", "deaths", "cases_per1000", "deaths_per1000"]`** is a list of columns that contain values that we want to display in the hover squares
+* **`["cases", "deaths", "cases_per100000", "deaths_per100000"]`** is a list of columns that contain values that we want to display in the hover squares
 * **`covid_colorscale`** is our custom logarithmic color scale
-* **"usa"** means that our map will show only the map of the USA
+* **`"usa"`** means that our map will show only the map of the USA
 * the **`labels`** redefine the presentation of the column headers as more informative text where the values in quotes before the colon are the actual column names and the values in quotes after the colon are the "new" values that show up in our map
-* **`"Spread of COVID-19 Cases in US Counties <br> January 21, 2020-April 15, 2020"`** defines the map title, and includes a break \(`<br>,` or second line of text\) before the date range
+* **`"Spread of COVID-19 Cases in US Counties <br>January 21, 2020-April 15, 2020"`** defines the map title, and includes a break \(`<br>,` or second line of text\) before the date range
 
 This is a pretty large map file, so, again, we'll save this as an html file with:
 

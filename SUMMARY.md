@@ -5,10 +5,10 @@
 
 ## Interactive Density Heatmap
 
-* [Making Maps to Show Today's Cumulative Confirmed COVID-19 Cases](untitled.md)
-* [Cleaning JHU CSSE COVID-19 Data](cleaning-jhu-csse-covid-19-data.md)
-* [Making a Bubble Map of Cumulative COVID-19 Confirmed Cases as of April 14, 2020](making-a-bubble-map-of-cumulative-covid-19-confirmed-cases-as-of-april-14-2020.md)
-* [Making a Density Heat Map of Cumulative COVID-19 Confirmed Cases as of April 14, 2020](making-a-density-heatmap-of-cumulative-covid-19-confirmed-cases-on-april-14-2020.md)
+* [Making Maps to Show Today's Cumulative Confirmed COVID-19 Cases](interactive-density-heatmap/untitled.md)
+* [Cleaning JHU CSSE COVID-19 Data](interactive-density-heatmap/cleaning-jhu-csse-covid-19-data.md)
+* [Making a Bubble Map of Cumulative COVID-19 Confirmed Cases as of April 14, 2020](interactive-density-heatmap/making-a-bubble-map-of-cumulative-covid-19-confirmed-cases-as-of-april-14-2020.md)
+* [Making a Density Heat Map of Cumulative COVID-19 Confirmed Cases as of April 14, 2020](interactive-density-heatmap/making-a-density-heatmap-of-cumulative-covid-19-confirmed-cases-on-april-14-2020.md)
 
 ## Animated Choropleth Map
 
@@ -18,5 +18,5 @@
 
 ## Deriving Insights
 
-* [Data Visualization Interpretation](data-visualization-interpretation.md)
+* [Data Visualization Interpretation](deriving-insights/data-visualization-interpretation.md)
 

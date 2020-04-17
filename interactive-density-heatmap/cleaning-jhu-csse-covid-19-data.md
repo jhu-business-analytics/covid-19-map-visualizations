@@ -20,7 +20,7 @@ import json
 
 Since the JHU CSSE publishes their data on GitHub in csv formats, we can import the COVID-19 case data directly from their [COVID-19 repository](https://github.com/CSSEGISandData/COVID-19) \(in the folder containing the daily report data from April 14, 2020 in the following path: [csse\_covid\_19\_data](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)/[csse\_covid\_19\_daily\_reports](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports)/[**04-14-2020.csv**](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports/04-14-2020.csv)\). To work with the data in our notebook, we'll click on the Raw button:
 
-![](.gitbook/assets/raw-csv-github.png)
+![](../.gitbook/assets/raw-csv-github.png)
 
 to access a link to our data in a csv format. Save this data as a variable in our notebook:
 
@@ -38,7 +38,7 @@ df_covid_0414 = pd.read_csv(data_covid)
 
 If we preview our data with `df_covid_0414.head()`, we see that our data looks like: 
 
-![](.gitbook/assets/april-14-covid-data.png)
+![](../.gitbook/assets/april-14-covid-data.png)
 
 We see a lot of familiar information in this dataframe \(FIPS codes, county and state names and unique identifiers, and confirmed cases, deaths, and active COVID-19 cases\). This dataframe also gives us the latitude and longitude coordinates for each county, which allows us to plot our data on a geographic plane \(a map\). Even though there are some other types of [geographical coordinate systems](http://help.arcgis.com/en/sdk/10.0/arcobjects_net/conceptualhelp/index.html#//0001000002mq000000), these latitude and longitude coordinates \(global coordinate system/GCS\) are formatted correctly for our analysis with plotly and mapbox. If you import data that has other kinds of coordinates, you may need to convert them to the GCS or some other coordinate system before you can plot or map the data. 
 
@@ -46,7 +46,7 @@ We see a lot of familiar information in this dataframe \(FIPS codes, county and 
 
 The JHU CSSE dataset is pretty clean and tidy for us to pretty quickly build into a map that looks like the the New York Times' [Latest Map and Case Count](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html):
 
-![](.gitbook/assets/nyt-us-county-cases.png)
+![](../.gitbook/assets/nyt-us-county-cases.png)
 
 First, we'll cut the JHU data to include only US counties with: 
 
@@ -71,7 +71,7 @@ df_countypop = pd.read_csv(data_population,encoding='latin1')
 
 Which creates: 
 
-![](.gitbook/assets/us-census-2019-county-pop-estimate.png)
+![](../.gitbook/assets/us-census-2019-county-pop-estimate.png)
 
 To merge the county FIPS code onto our JHU CSSE dataframe, we need to:
 
@@ -104,7 +104,7 @@ df_countypop["FIPS"] = df_countypop["STATE"] + df_countypop["COUNTY"]
 
 This gives us a new FIPS column, which looks like: 
 
-![](.gitbook/assets/full-county-fips-population-df.png)
+![](../.gitbook/assets/full-county-fips-population-df.png)
 
 Before we can merge the data from the population dataframe onto our JHU COVID-19 dataframe, we need to remove all null values in the FIPS column:
 
@@ -130,7 +130,7 @@ df_covid_0414_us["FIPS"] = df_covid_0414_us["FIPS"].str.zfill(5)
 
 This gives us:
 
-![](.gitbook/assets/full-fips-jhu-covid19-df.png)
+![](../.gitbook/assets/full-fips-jhu-covid19-df.png)
 
 ### Merging Data
 
@@ -146,7 +146,7 @@ df_covid_0414_us = pd.merge(df_covid_0414_us,
 
 Which gives us the following dataframe:
 
-![](.gitbook/assets/merged-df-population-and-covid.png)
+![](../.gitbook/assets/merged-df-population-and-covid.png)
 
 Now, we can create a column to calculate the number of COVID-19 cases and deaths per 1,000 people:
 
@@ -166,11 +166,11 @@ df_covid_0414_us["deaths_per1000"] = round(df_covid_0414_us["deaths_per1000"], 2
 
 Here, we redefine the per capita columns in our dataframe \(`df_covid_0414_us["cases_per1000"]` and `df_covid_0414_us["deaths_per1000"]`\) as their same values \(`df_covid_0414_us["cases_per1000"]` and `df_covid_0414_us["deaths_per1000"]`\), except rounded \(`round()`\) to the second decimal place \(`2`\). This gives us this dataframe: 
 
-![](.gitbook/assets/rounded-case-and-death-counts.png)
+![](../.gitbook/assets/rounded-case-and-death-counts.png)
 
 Now we have all of the data to make a bubble map similar to the NYT Total COVID-19 Cases per US County:
 
-![](.gitbook/assets/nyt-hover-data.png)
+![](../.gitbook/assets/nyt-hover-data.png)
 
 
 

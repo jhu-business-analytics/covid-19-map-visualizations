@@ -32,7 +32,7 @@ df_covid_0414_repeat = df_covid_0414_us.reindex(df_covid_0414_us.index.repeat(df
 
 Here, we redefine a new data frame \(`df_covid_0414_repeat =`\) where we are editing the index/row labels of our previous data frame \(`df_covid_0414_us.reindex`\) by repeating values \(`.repeat`\) of our data frame rows \(`df_covid_0414_us.index`\) a number of times equal to the value in the confirmed COVID-19 case column \(`(df_covid_0414_us["Confirmed"])`\). Then we reset the row labels \(`.reset_index()`\) so that our row labels correspond to the correct row numbers. This gives us: 
 
-![](.gitbook/assets/repeat-dataframe-for-density.png)
+![](../.gitbook/assets/repeat-dataframe-for-density.png)
 
 where we can see that the row for Abbeville, South Carolina is repeated 9 times since the value in the Confirmed column is 9. 
 
@@ -76,7 +76,7 @@ density_heatmap.write_html("density_heatmap_covid19_april14.html")
 
 This gives us a map that looks like: 
 
-![](.gitbook/assets/heatmap-of-covid-cases.png)
+![](../.gitbook/assets/heatmap-of-covid-cases.png)
 
 Which might give us a better understanding of regional hotspots, which still contains the same information as our bubble chart \(since we're using essentially the same data frame to create the map\).
 
