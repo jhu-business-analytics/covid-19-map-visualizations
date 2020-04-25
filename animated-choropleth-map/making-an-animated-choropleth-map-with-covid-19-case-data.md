@@ -104,6 +104,15 @@ This is a pretty large map file, so, again, we'll save this as an html file with
 covid_uscounty_color.write_html("covid19_cases_us_county.html")
 ```
 
+{% hint style="info" %}
+Remember to use the following code to download the html file if you're working in Google Colaboratory: 
+
+```text
+# download html file
+files.download("covid19_cases_us_county.html")
+```
+{% endhint %}
+
 Which will download to our working folder. When we open this file we'll see the animated choropleth map that shows the spread of COVID-19 cases when we click the play button: 
 
 ![](../.gitbook/assets/us_county_covid19_toll.gif)
