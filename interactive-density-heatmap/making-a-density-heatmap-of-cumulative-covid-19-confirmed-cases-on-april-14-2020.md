@@ -74,6 +74,29 @@ Since our repeat data frame is pretty large, if we view this data frame in our J
 density_heatmap.write_html("density_heatmap_covid19_april14.html")
 ```
 
+{% hint style="info" %}
+If you're writing this code in Google Colaboratory, you'll need to add a few extra lines of code to extract the files from the Google Colaboratory website and download them on your computer: 
+
+```text
+# install orca to download plotly html/images
+!wget https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage -O /usr/local/bin/orca
+!chmod +x /usr/local/bin/orca
+!apt-get install xvfb libgtk2.0-0 libgconf-2-4
+
+# import library to export files
+from google.colab import files
+```
+
+Then, you'll download the html file with: 
+
+```text
+# download html file
+files.download("density_heatmap_covid19_april14.html")
+```
+{% endhint %}
+
+
+
 This gives us a map that looks like: 
 
 ![](../.gitbook/assets/heatmap-of-covid-cases.png)
