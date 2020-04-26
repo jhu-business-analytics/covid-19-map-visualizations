@@ -97,6 +97,17 @@ Here:
 * the **`labels`** redefine the presentation of the column headers as more informative text where the values in quotes before the colon are the actual column names and the values in quotes after the colon are the "new" values that show up in our map
 * **`"Spread of COVID-19 Cases in US Counties <br>January 21, 2020-April 15, 2020"`** defines the map title, and includes a break \(`<br>,` or second line of text\) before the date range
 
+{% hint style="info" %}
+If you get an error message that says `TypeError: choropleth() got an unexpected keyword argument 'geojson'`this means that you need to update your version of plotly. To do this, run the code: 
+
+```text
+# update plotly version
+!pip install plotly --upgrade plotly
+```
+
+to update the version of plotly, and then re-run the code to generate the visualization.
+{% endhint %}
+
 This is a pretty large map file, so, again, we'll save this as an html file with:
 
 ```python
