@@ -37,7 +37,7 @@ In our Python Notebooks we’ll use the following packages to conduct our analys
 
 The steps for our data analysis are available in [this GitBook tutorial](https://melanieshimano.gitbook.io/covid-19-critical-trend-data-visualizations/). You can use [this](https://github.com/jhu-business-analytics/covid-19-map-visualizations/blob/master/2020-04-14-covid19-cases-us-county-animation-gitbooktutorial-STARTER-melanieshimano.ipynb) pre-commented starter notebook to follow along with the tutorial, or copy and paste the code from the codeblocks \(dark blue text boxes\) in the tutorial to create this and other geospatial data visualizations:
 
-![alt text](https://github.com/jhu-business-analytics/covid-19-map-visualizations/blob/master/.gitbook/assets/us_county_covid19_toll.gif)
+![](.gitbook/assets/us_county_covid19_toll.gif)
 
 ## Business Answer
 
